@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Los Colores</title>
+        <link rel="stylesheet" href="colores.css">
+        <script>
+            alert("Bienvenido a la pagina");
+          </script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Los Colores</h1>
+        </header>
+         <p aling="center" id="clock"></p>
+         <script>
+            function show() {
+                var Digital = new Date()
+                var hours = Digital.getHours()
+                var minutes = Digital.getMinutes()
+                var seconds = Digital.getSeconds()
+                var dn = "AM"
+                if (hours > 12) {
+                        dn = "PM"
+                        hours = hours - 12
+                    }
+                if (hours == 0)
+                        hours = 12
+                if (minutes <= 9)
+                        minutes = "0" + minutes
+                if (seconds <= 9)
+                        seconds = "0" + seconds
+                    document.getElementById('clock').innerText = hours + ":" + minutes + ":" +
+                        seconds + " " + dn
+                    setTimeout("show()", 1000)
+                }
+                show();
+        </script>
+        
+            <h1 class="titulos">Los Colores</h1>
+            <p>El color es la impresión producida por un tono de luz en los órganos visuales, o más exactamente, es una percepción visual que se genera en el cerebro de los humanos y otros animales al interpretar las señales nerviosas que le envían los fotorreceptores en la retina del ojo, que a su vez interpretan y distinguen las distintas longitudes de onda que captan de la parte visible del espectro electromagnético. Es estudiado por la ciencia del color.</p>
+
+            <h1 class="titulos">Colores primarios</h1>
+            <p>Tradicionalmente, en artes plásticas aprendemos que los colores primarios son el rojo, amarillo y azul. No obstante, a medida que se han estudiado los colores se han determinado otras clasificaciones como colores RGB y colores CMYK, que conforman los colores primarios por luz o pigmento.</p>
+            <p>Investigaciones sobre los colores exponen que el ojo humano tiene una visión tricromática (ve tres colores) y solo es capaz de percibir el color a través de la luz. Esto se debe a que los objetos devuelven las ondas electromagnéticas que no absorben, las cuales estimulan las células fotosensibles y receptoras del ojo, y nos permiten distinguir gran diversidad de colores.</p>
+
+            <h1 class="titulos">Los colores primarios son:</h1>
+            <h2>Rojo</h2>
+            <a title="Rojo" href="https://es.wikipedia.org/wiki/Rojo"><img class="rojo" src="images/rojo.jpg" alt="Rojo" width="300" height="300"></a>
+
+            <h2>Amarillo</h2>
+            <a title="Amarillo" href="https://es.wikipedia.org/wiki/Amarillo"><img class="Amarillo" src="images/amarillo.jpg" alt="Amarillo" width="300" height="300"></a>
+
+            <h2>Azul</h2>
+            <a title="Azul" href="https://es.wikipedia.org/wiki/Azul"><img class="Azul" src="images/descarga.png" alt="Azul" width="300" height="300"></a>
+            <button onclick="window.close();">Cerrar esta ventana" </button> 
+
+            <p style="text-align:center">
+                <button id="show_source_code" onclick="view_source_code(event);" >Ver código fuente</button>
+            </p>
+            <p id="source_code_result"></p>
+            <script>
+                function view_source_code(e){
+                    var source = '<html>' + document.body.innerHTML + '</html>';
+                    var result = document.getElementById('source_code_result');
+                    result.innerText = source;
+                }   
+                </script>
+    </body>

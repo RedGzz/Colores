@@ -1,0 +1,26 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background:linear-gradient(#A93226,#CD6155,#E6B0AA)
+}
+    
+
+
+@font-face {
+    font-family: Letra;
+    src: url(fonts/GCursiv2.ttf);
+}
+header{
+    padding: 5px;
+    width: 100%;
+    margin:auto;
+    font-family: Letra;
+    color: #1DB42F;
+    font-size: 30px;
+    text-shadow: 0.1em 0.1em #176C21;
+    text-align: center;
+}
+
+.titulos{
+    color: orange;
+    text-align: left;
+}
